@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/x"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중고거래 글쓰기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/write_post_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="완료"
+            android:textColor="@color/carrot"
+            android:textSize="18dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="10dp">
+                <ImageView
+                    android:id="@+id/write_post_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/image"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/image_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/write_post_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="글 제목"
+                android:textSize="20dp"
+                android:layout_margin="20dp"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/write_post_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="카테고리 선택"
+                android:textSize="20dp"
+                android:layout_margin="20dp"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/write_post_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="가격"
+                android:textSize="20dp"
+                android:inputType="number"
+                android:layout_margin="20dp"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/write_post_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="18dp"
+                android:hint="게시글 내용을 작성해주세요."
+                android:background="@null"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
